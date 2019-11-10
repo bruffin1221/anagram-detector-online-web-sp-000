@@ -6,14 +6,17 @@ class Anagram
     @words=words
   end
 
-def match(word)
-   @word=word
-   @word.each_cons(1).map{|v| v.join.split('').sort}.select{|x| x==@words.split('').sort}.flatten.join.split
- end
+  def match(word)
+    word.select{|x| (x.split("").sort=="listen".split("").sort)}
+  end
 
  end
 
-listen=Anagram.new("listen")
-listen.words
+listen=Anagram.new("allergy")
 
-listen.match(%w(enlists google inlets banana))
+listen.match(%w(gallery ballerina regally clergy largely leading))
+
+
+
+
+    
