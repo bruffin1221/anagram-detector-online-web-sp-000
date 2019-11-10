@@ -11,12 +11,3 @@ class Anagram
   end
 
  end
-
-listen=Anagram.new("allergy")
-
-listen.match(%w(gallery ballerina regally clergy largely leading))
-
-
-def match(word)
-  word.select{|x| (x.split("").sort=="listen".split("").sort)}
-end
