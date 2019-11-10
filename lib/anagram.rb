@@ -8,6 +8,7 @@ class Anagram
 
   def match(word)
     word.select{|x| (x.split("").sort=="listen".split("").sort)}
+    word
   end
 
  end
@@ -15,8 +16,3 @@ class Anagram
 listen=Anagram.new("allergy")
 
 listen.match(%w(gallery ballerina regally clergy largely leading))
-
-
-
-
-    
